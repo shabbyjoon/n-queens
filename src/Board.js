@@ -146,7 +146,7 @@
       var rows = this.rows();
       for (let i = 0; i < rows.length; i++) {
         var row = rows[i];
-        var column = i - majorDiag;
+        var column = i + majorDiag;
         if (column >= 0) {
           if (row[column]) {
             counter++;
@@ -165,12 +165,12 @@
       if (this.hasMajorDiagonalConflictAt(this._getFirstRowColumnIndexForMajorDiagonalOn(0, 0))) {
         return true;
       }
-      if (maxIndex > 1){
+      if (maxIndex > 1) {
         for (let i = 1; i < maxIndex; i++) {
           if (this.hasMajorDiagonalConflictAt(this._getFirstRowColumnIndexForMajorDiagonalOn(0, i))) {
             return true;
           } else if (this.hasMajorDiagonalConflictAt(this._getFirstRowColumnIndexForMajorDiagonalOn(i, 0))) {
-            return true
+            return true;
           }
         }
       }
@@ -209,12 +209,12 @@
       if (this.hasMinorDiagonalConflictAt(this._getFirstRowColumnIndexForMinorDiagonalOn(maxIndex, maxIndex))) {
         return true;
       }
-      if (maxIndex > 0){
+      if (maxIndex > 0) {
         for (let i = maxIndex - 1; i >= 0; i--) {
           if (this.hasMinorDiagonalConflictAt(this._getFirstRowColumnIndexForMinorDiagonalOn(0, i))) {
             return true;
           } else if (this.hasMinorDiagonalConflictAt(this._getFirstRowColumnIndexForMinorDiagonalOn(i, maxIndex))) {
-            return true
+            return true;
           }
         }
       }
