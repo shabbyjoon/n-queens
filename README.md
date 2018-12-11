@@ -1,2 +1,4 @@
 # n-queens
-This is a project I completed as a student at [hackreactor](http://hackreactor.com). This project was worked on with a pair.
+
+## Description
+This repo contains solutions for n-queens and n-rooks algorithms.
